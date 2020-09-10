@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <h1>Task thing</h1>
+</head>
+
+<body>
+    <div class="container">
+        <form class="col-6 mx-auto" action="/add" method="POST">
+            <div class="input-group">
+                <input type="text" class="form-control" name="item" placeholder="enter a task">
+                <input type="text" class="form-control" name="desc" placeholder="enter description">
+                <input type="text" class="form-control" name="crea" placeholder="enter the creator of the task">
+                <input type="text" class="form-control" name="dur" placeholder="enter the duration">
+                <input type="text" class="form-control" name="tim" placeholder="enter the time task created at">
+                <span><button type="submit">Submit</button></span>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <ul class="col-6 mx-auto">
+            <% for(var i=0;i<taskList.length;i++){ %>
+            <li>Name: <%= taskList[i].name%>
+                Description: <%= taskList[i].description%>
+                Creator: <%= taskList[i].creator%>
+                Duration: <%= taskList[i].duration%>
+                CreatedAt: <%= taskList[i].createdAt%></li>
+            <%}%>
+        </ul>
+    </div>
+</body>
+
+</html>
