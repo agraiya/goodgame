@@ -19,9 +19,6 @@ var taskSchema = new mongoose.Schema({
     duration: {
         type: Date,
         default: Date.now,
-        index: {
-            expires: '5m'
-        }
     },
     createdAt: {
         type: Date,
